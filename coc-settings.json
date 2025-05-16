@@ -1,0 +1,88 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "rust",
+    "python",
+    "c",
+    "cpp",
+    "java",
+    "javascript",
+    "typescript",
+    "vue",
+    "sql"
+  ],
+  "suggest.autoTrigger": "always",
+  "suggest.noselect": false,
+  "diagnostic.enable": true,
+  "diagnostic.virtualText": true,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".git/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "rootPatterns": ["Cargo.toml", ".git/"],
+      "filetypes": ["rust"]
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"],
+      "rootPatterns": ["pyproject.toml", "setup.py", ".git/"],
+      "filetypes": ["python"]
+    },
+    "ccls": {
+      "command": "clangd",
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/"],
+      "filetypes": ["c", "cpp"]
+    },
+    "java": {
+      "command": "java",
+      "args": [
+        "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+        "-Dosgi.bundles.defaultStartLevel=4",
+        "-Declipse.product=org.eclipse.jdt.ls.core.product",
+        "-Dlog.protocol=true",
+        "-Dlog.level=ALL",
+        "-Xms1g",
+        "--add-modules=ALL-SYSTEM",
+        "--add-opens",
+        "java.base/java.util=ALL-UNNAMED",
+        "--add-opens",
+        "java.base/java.lang=ALL-UNNAMED",
+        "-jar",
+        "/path/to/jdtls/plugins/org.eclipse.equinox.launcher_*.jar",
+        "-configuration",
+        "/path/to/jdtls/config_linux",
+        "-data",
+        "/path/to/workspace"
+      ],
+      "rootPatterns": ["pom.xml", "build.gradle", ".git/"],
+      "filetypes": ["java"]
+    },
+    "sql": {
+      "command": "sql-language-server",
+      "args": ["up", "--method", "stdio"],
+      "rootPatterns": [".git/"],
+      "filetypes": ["sql"]
+    },
+    "cmake": {
+        "command": "cmake-language-server",
+        "filetypes": ["cmake"],
+        "rootPatterns": [
+            "build/"
+        ],
+        "initializationOptions": {
+            "buildDirectory": "build"
+        }
+    }
+  },
+  "tsserver.enable": true,
+  "vetur.enable": true,
+  "coc.source.file.enable": true,
+  "coc.source.around.enable": true
+}
