@@ -182,6 +182,7 @@ let g:vimspector_enable_mappings = 'HUMAN'  " Use human-readable key mappings
 
 " NERDTree configurations +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 nnoremap <C-n> :NERDTreeToggle<CR>  " Toggle NERDTree with Ctrl+n
+let g:NERDTreeShowHidden=1
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('t:NERDTreeBufName') && bufname('%') == t:NERDTreeBufName | quit | endif
 
 " FZF configurations +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
