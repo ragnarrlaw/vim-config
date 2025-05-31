@@ -35,10 +35,10 @@
       "rootPatterns": ["pyproject.toml", "setup.py", ".git/"],
       "filetypes": ["python"]
     },
-    "ccls": {
-      "command": "clangd",
-      "rootPatterns": [".ccls", "compile_commands.json", ".git/"],
-      "filetypes": ["c", "cpp"]
+    "clangd": {
+      "command": "clangd-14",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     },
     "java": {
       "command": "java",
