@@ -47,7 +47,7 @@ call plug#end()
 " General Settings ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let g:mapleader = "\<Space>"
 set number              " Show line numbers
-set relativenumber      " Show relative line numbers
+" set relativenumber      " Show relative line numbers
 set tabstop=4           " 4 spaces per tab
 set shiftwidth=4        " 4 spaces for indentation
 set expandtab           " Convert tabs to spaces
